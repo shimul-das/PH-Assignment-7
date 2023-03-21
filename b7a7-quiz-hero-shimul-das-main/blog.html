@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+</head>
+<body>
+    <div style="border: 1px solid lightblue;text-align:center; background-color: antiquewhite;">
+        <h2>Our Blog</h2>
+    </div>
+    <div  style="border: 1px solid lightblue;text-align:center; background-color: cadetblue; padding: 10px;">
+        <h1>1.What is the Difference among Map, filter, foreach and find?</h1>
+        <p><span style="font-weight:bold;">Map:</span> A new array with the same number of items as the original array is produced by applying a specified function to each element of an array using the map function. The initial array is not changed by it.</p>
+        <p><span style="font-weight:bold;">Filter:</span> The filter function accepts two inputs: an array and a callback function. It applies the callback function to each element of the array and outputs a new array that only contains elements for which the callback function returns true. The initial array is unaltered.</p>
+        <p><span style="font-weight:bold;">forEach:</span> The forEach function applies a given function to each element of an array but does not return anything. It is used when we want to iterate through an array and perform some action on each element, but we don't need to create a new array.</p>
+        <p><span style="font-weight:bold;">Find:</span> The find function accepts an array and a callback function as input, applies the callback function to each element of the array, and outputs the first element for which the callback function returns true. The condition returns undefined if no elements match it.</p>
+
+    </div>
+    <div  style="border: 1px solid lightblue;text-align:center; background-color: cadetblue; padding: 10px;">
+        <h1>2.What is the difference among local storage, session storage and cookies?</h1>
+        <p><span style="font-weight:bold;">localStorage:</span> The localStorage is a persistent storage system that holds data without a time limit. Even after closing and reopening the browser, the data kept in localStorage is still accessible. JavaScript can be used to access data that is saved in key-value pairs. Depending on the browser, localStorage can store a maximum of 5–10 MB per domain.</p>
+        </p>
+        <p><span style="font-weight:bold;">sessionStorage:</span> The sessionStorage  is a session-based storage mechanism that stores data for a single session. The data stored in sessionStorage is available as long as the browser window or tab is open. Once the browser window or tab is closed, the data is lost. Data is stored as key-value pairs and can be accessed using JavaScript.</p>
+        <p><span style="font-weight:bold;">sessionStorage:</span>  Cookies are small text files that are stored on the client's computer by the web server. They are often used for session management, user authentication, and tracking user behavior. Cookies have an expiration date and can be persistent  or session-based . Cookies can also be encrypted for security reasons.</p>
+    </p>
+
+    </div>
+    <div  style="border: 1px solid lightblue;text-align:center; background-color: cadetblue; padding: 10px;">
+        <h1>3. What is event loop and how it works?</h1>
+        <p>JavaScript's concurrency paradigm, known as the event loop, enables asynchronous code to run without blocking.
+
+            JavaScript uses single-threaded execution, which allows for the simultaneous execution of just one piece of code. The execution of asynchronous code is, however, made possible by a number of JavaScript features, including callbacks, promises, and async. When an asynchronous action is launched, JavaScript doesn't wait for it to finish; instead, it immediately starts running other code.
+            
+            JavaScript's event loop is in charge of controlling the execution of asynchronous code. It continuously monitors the message queue and the call stack to see whether any new code needs to be run.</p>
+            <h2>Thats way  the event loop works:</h2>
+            <p>1. The JavaScript engine executes the code synchronously, adding functions to the call stack.</p>
+            <p>2. When an asynchronous operation is started, it is removed from the call stack, and its callback function is added to the message queue.</p>
+            <p>3. When the call stack is empty, the event loop checks the message queue for pending tasks.</p>
+            <p>4. If there are pending tasks in the message queue, the event loop picks the first task and adds its callback function to the call stack for execution.</p>
+            <p>5. The JavaScript engine executes the callback function, and any synchronous code in the function is added to the call stack.</p>
+            <p>6. The event loop repeats the process, checking the call stack and message queue for new tasks.</p>
+            
+
+    </div>
+    <div  style="border: 1px solid lightblue;text-align:center; background-color: cadetblue; padding: 10px;">
+        <h1>4. What is the functionality of quizTimer function?</h1>
+        <p>This function work for as a countdown timer for a quiz. Now i will explain How It Works:</p>
+        <p>The function takes a single argument dismiss, which is a boolean value. If dismiss is truthful, then the function clears the timer and returns, effectively stopping the countdown. Otherwise, dismiss is falsy, the function sets up a timer using the setInterval function. This timer runs a callback function every second until it is cleared. Inside the timer callback function, the function selects an HTML element with the ID count, which is used for timer display. It then calculates the minutes and seconds remaining based on a variable count, which represents the number of seconds remaining. The count variable is then incremented by 1, representing the passage of one second. If the count variable is greater than 60 , the function alternates the color of the timer display between two shades of red, by adding and removing CSS classes text-red-300 and text-red-700.</p>
+        <p>In summary, this function provides a countdown timer for a quiz, which updates the HTML content of a timer display every second, and changes the color of the display every minute. It can be stopped by passing true as an argument to the function.</p>
+
+    </div>
+
+    <div  style="border: 1px solid lightblue;text-align:center; background-color: cadetblue; padding: 10px;">
+        <h1>5.What is the functionality of chooseQuiz function?</h1>
+        <p>This function that is used to select or choose a quiz option and store the selected answer in an array of answers. Now i will explain How It Works:</p>
+        <p>The function takes two arguments: index and givenAns. index is an integer that represents the index of the quiz option that was selected, and givenAns is the answer that was selected for that quiz option. The function checks whether an answer object with the same ID as the current quiz option already exists in the answers array. If an answer object with the same ID exists, the function searches through the answers array to find that object, and replaces it with a new object that has the same properties as the old object, except for the givenAns property, which is set to the newly selected answer. If an answer object with the same ID does not exist, the function creates a new answer object that contains the quiz data from quizData[index] and the selected answer givenAns, and adds it to the answers array. Finally, the function calls the displayAnswers function with the answers array as an argument, which presumably updates the UI to display the selected answers for all quiz questions.</p>
+        <p>In summary, this function allows the user to select or choose a quiz option, and keeps track of the selected answer by storing it in an array of answers. If the user changes their answer for a particular quiz question, the function updates the answer object in the array accordingly.</p>
+
+    </div>
+    
+</body>
+</html>
